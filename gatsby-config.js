@@ -43,7 +43,19 @@ module.exports = {
           emitWarning: true,
           failOnError: false
         }
-      }
+      },
+    },
+    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Rubik`,
+            variants: [`400`, `400i`, `500`, `700`]
+          },
+        ],
+      },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
