@@ -29,5 +29,5 @@ export const query = graphql`
 `
 
 Index.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.shape.isRequired,
 }

@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "John Doe Photography Portfolio",
+        short_name: "JD Photography",
         start_url: "/",
         icon: "src/images/logo.png",
       },
