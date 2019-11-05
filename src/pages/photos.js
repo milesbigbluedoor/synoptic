@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import "../scss/main.scss"
@@ -6,21 +7,28 @@ import "../scss/main.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const PhotosPage = ({ data }) => (
+const Photos = ({ data }) => (
   <Layout>
     <SEO title="Photography Catalogue | John Doe Photography" />
     {data.allNodePhoto.edges.map(edge => (
       <div key={edge.node.id}>
         <h3>{edge.node.title}</h3>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem`, width: `100%` }}>
-          <Img fluid={ edge.node.relationships.field_photograph.localFile.childImageSharp.fluid } />
+        <div
+          style={{ maxWidth: `300px`, marginBottom: `1.45rem`, width: `100%` }}
+        >
+          <Img
+            fluid={
+              edge.node.relationships.field_photograph.localFile.childImageSharp
+                .fluid
+            }
+          />
         </div>
       </div>
     ))}
   </Layout>
 )
 
-export default PhotosPage
+export default Photos
 
 export const query = graphql`
   query {
@@ -47,3 +55,7 @@ export const query = graphql`
     }
   }
 `
+
+Photos.propTypes = {
+  data: PropTypes.node.isRequired,
+}
