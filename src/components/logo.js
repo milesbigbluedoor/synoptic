@@ -7,7 +7,6 @@ import LogoSVGWhite from "../images/jd_logo--white.svg"
 
 const Logo = ({ modifier }) => {
   let logoSrc
-  console.log(modifier)
 
   if (modifier === "white") {
     logoSrc = LogoSVGWhite

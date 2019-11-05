@@ -25,7 +25,7 @@ const accounts = [
 const SocialMedia = () => (
   <div className="social-media">
     {accounts.map(account => (
-      <a href={account.url} className="social-media__link">
+      <a href={account.url} className="social-media__link" key={account.name}>
         <div
           className="social-media__icon"
           style={{
