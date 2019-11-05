@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Navigation = () => (
-  <nav className="navigation">
+const Navigation = ({ modifier }) => (
+  <nav className={`navigation ${modifier ? `navigation--${modifier}` : ""}`}>
     <ul className="navigation__menu">
       <li className="navigation__menu-item">
         <Link
@@ -54,3 +55,11 @@ const Navigation = () => (
 )
 
 export default Navigation
+
+Navigation.propTypes = {
+  modifier: PropTypes.string,
+}
+
+Navigation.defaultProps = {
+  modifier: "",
+}

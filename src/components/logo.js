@@ -1,15 +1,26 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import LogoSVG from "../images/jd_logo.svg"
+import LogoSVGWhite from "../images/jd_logo--white.svg"
 
-const Logo = () => {
+const Logo = ({ modifier }) => {
+  let logoSrc
+  console.log(modifier)
+
+  if (modifier === "white") {
+    logoSrc = LogoSVGWhite
+  } else {
+    logoSrc = LogoSVG
+  }
+
   return (
     <Link to="/" className="branding">
       <div
         className="branding__logo"
         style={{
-          backgroundImage: `url(${LogoSVG})`,
+          backgroundImage: `url(${logoSrc})`,
         }}
       />
     </Link>
@@ -17,3 +28,11 @@ const Logo = () => {
 }
 
 export default Logo
+
+Logo.propTypes = {
+  modifier: PropTypes.string,
+}
+
+Logo.defaultProps = {
+  modifier: "black",
+}

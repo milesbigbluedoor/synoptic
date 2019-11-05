@@ -1,0 +1,21 @@
+.social-media {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media__link {
+  padding: 0 8px;
+  transition: opacity .2s ease-out;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.social-media__icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2px;
+  height: 30px;
+  width: 30px;
+}

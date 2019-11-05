@@ -10,6 +10,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .footer {
+    margin-top: auto;
+  }
+}
+
 .button {
   border-radius: 3px;
   background: $black;
