@@ -48,7 +48,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Rubik`,
+            family: `Nunito`,
             variants: [`400`, `400i`, `500`, `700`],
           },
         ],
