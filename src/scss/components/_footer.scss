@@ -1,0 +1,15 @@
+.footer {
+  background: $black;
+
+  .social-media {
+    margin-left: auto;
+  }
+}
+
+.footer__inner-wrapper {
+  align-items: center;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 72px 0;
+}

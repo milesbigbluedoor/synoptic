@@ -1,5 +1,10 @@
 .navigation {
-
+ &--dark {
+   .navigation__menu-item-link {
+     color: white;
+     font-size: 16px;
+   }
+ }
 }
 
 .navigation__menu {
@@ -19,7 +24,7 @@
   padding: 8px 0 0;
   position: relative;
   text-decoration: none;
-  transition: opacity .2s ease-out;
+  transition: color .2s ease-out;
 
   &:after {
     display: inline-block;
@@ -40,5 +45,5 @@
 }
 
 .navigation__menu-item-link--active {
-  opacity: 0.5;
+  color: rgba(1, 22, 39, .5);
 }
