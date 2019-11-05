@@ -1,0 +1,22 @@
+.home-about {
+  background: #f8f8f8;
+  padding: 105px 0;
+}
+
+.home-about__inner-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px;
+} 
+
+.home-about__title {
+  font-size: 40px;
+  margin-bottom: 32px;
+  color: $black;
+}
+
+.home-about__description {
+  margin-bottom: 16px;
+  color: #555;
+}
