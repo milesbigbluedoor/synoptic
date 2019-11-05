@@ -1,0 +1,12 @@
+.link-button {
+
+  &--cta {
+    background-color: $primary;
+    color: $black;
+
+    &:hover {
+      color: $primary;
+      background-color: $black;
+    }
+  }
+}
