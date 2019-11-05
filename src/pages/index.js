@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import "../scss/main.scss"
 
@@ -26,3 +27,7 @@ export const query = graphql`
     }
   }
 `
+
+Index.propTypes = {
+  data: PropTypes.node.isRequired,
+}
