@@ -29,7 +29,7 @@ const RecentPhotos = () => {
   `)
 
   return (
-    <div className="recent-photos">
+    <section className="recent-photos">
       <h2 className="recent-photos__title">Recent Photos</h2>
       <div className="recent-photos__wrapper">
         {data.allNodePhoto.edges.map(edge => (
@@ -47,7 +47,7 @@ const RecentPhotos = () => {
         ))}
       </div>
       <LinkButton url="/photos" text="View all" />
-    </div>
+    </section>
   )
 }
 

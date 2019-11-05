@@ -16,7 +16,7 @@ const Hero = () => {
   `)
 
   return (
-    <div className="hero">
+    <section className="hero">
       <Img
         fluid={data.heroImage.childImageSharp.fluid}
         style={{ maxHeight: "700px" }}
@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
