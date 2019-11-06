@@ -27,3 +27,33 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      allTaxonomyTermSubjects {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+    }
+  `).then(result => {
+    result.data.allTaxonomyTermSubjects.edges.forEach(({ node }) => {
+      createPage({
+        path: `/photos/subject/${node.name.toLowerCase()}`,
+        component: path.resolve(`./src/pages/photos.js`),
+        context: {
+          filter: {
+            relationships: {
+              field_subject: { elemMatch: { id: { eq: node.id } } },
+            },
+          },
+        },
+      })
+    })
+  })
+}
