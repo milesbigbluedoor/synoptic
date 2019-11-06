@@ -1,0 +1,49 @@
+.photo-card {
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(1, 22, 39, 0.2);
+  height: 500px;
+  width: calc(50% - 12px);
+  margin: 0 24px 24px 0;
+  overflow: hidden;
+  transition: all .25s ease-in-out;
+  position: relative;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(1, 22, 39, 0.2);
+    transform: translateY(-5px);
+
+    .photo-card__title {
+      opacity: 1;
+
+      h3 {
+        transform: translateY(15px);
+      }
+    }
+  }
+}
+
+.photo-card__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0) 100%);
+  transition: opacity .3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 5px;
+
+  h3 {
+    color: white;
+    font-size: 24px;
+    transform: translateY(50px);
+    transition: transform .3s ease-out;
+  }
+}
