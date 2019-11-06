@@ -13,7 +13,7 @@ import SEO from "../components/seo"
 const Photos = ({ data, location }) => {
   const [page, setPage] = useState(1)
   const [allPhotosLoaded, setAllPhotosLoaded] = useState(false)
-  const photosPerPage = 2
+  const photosPerPage = 8
 
   const renderPhotos = () => {
     const photos = data.allNodePhoto.edges
@@ -107,7 +107,7 @@ export default Photos
 
 export const query = graphql`
   query($filter: node__photoFilterInput = {}) {
-    allNodePhoto(filter: $filter) {
+    allNodePhoto(filter: $filter, sort: { fields: created, order: DESC }) {
       edges {
         node {
           id

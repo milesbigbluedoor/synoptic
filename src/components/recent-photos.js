@@ -6,7 +6,7 @@ import LinkButton from "./link-button"
 const RecentPhotos = () => {
   const data = useStaticQuery(graphql`
     query {
-      allNodePhoto(limit: 3, sort: { fields: created, order: ASC }) {
+      allNodePhoto(limit: 3, sort: { fields: created, order: DESC }) {
         edges {
           node {
             id
