@@ -26,7 +26,7 @@ export const query = graphql`
       body {
         value
       }
-      created
+      created(formatString: "Do MMMM YYYY")
       relationships {
         field_image {
           localFile {

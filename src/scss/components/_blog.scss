@@ -1,0 +1,17 @@
+.blog__title {
+  color: $black;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 40px;
+  padding: 105px 0 32px;
+}
+
+.blog__posts {
+  margin-bottom: 105px;
+}
+
+.blog__load-more {
+  display: block;
+  margin: 0 auto 105px;
+}
