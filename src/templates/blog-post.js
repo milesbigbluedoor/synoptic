@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import "../scss/main.scss"
 
+import Banner from "../components/banner"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -12,7 +13,19 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title="Photography Catalogue | John Doe Photography" />
-      <h1>{post.title}</h1>
+      <Banner
+        image={post.relationships.field_image.localFile.childImageSharp.fluid}
+      />
+      <article className="blog-post">
+        <h1 className="blog-post__title">{post.title}</h1>
+        <p className="blog-post__date">{post.created}</p>
+        <p
+          className="blog-post__body"
+          dangerouslySetInnerHTML={{
+            __html: post.body.value,
+          }}
+        />
+      </article>
     </Layout>
   )
 }
@@ -26,12 +39,12 @@ export const query = graphql`
       body {
         value
       }
-      created
+      created(formatString: "Do MMMM YYYY")
       relationships {
         field_image {
           localFile {
             childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
+              fluid(maxWidth: 1920, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

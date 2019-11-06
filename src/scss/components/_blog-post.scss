@@ -1,0 +1,22 @@
+.blog-post {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 105px 20px;
+}
+
+.blog-post__title {
+  color: $black;
+  font-size: 40px;
+}
+
+.blog-post__date {
+  margin-bottom: 32px;
+}
+
+.blog-post__body {
+  color: #555;
+
+  p {
+    margin-bottom: 16px;
+  }
+}

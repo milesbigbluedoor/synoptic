@@ -22,14 +22,31 @@ body {
 
 .button {
   border-radius: 3px;
-  background: $black;
-  color: white;
+  background: rgba(1, 22, 39, .1);
+  color: $black;
   font-weight: $bold;
   text-decoration: none;
   padding: 12px 24px;
   transition: all .2s ease-out;
 
   &:hover {
-    color: $primary;
+    color: white;
+    background: $black;
+  }
+}
+
+p {
+  line-height: 1.8;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+  line-height: 1.4;
+  font-size: 16px;
+  min-width: 140px;
+
+  &:hover {
+    cursor: pointer;
   }
 }

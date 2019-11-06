@@ -24,17 +24,18 @@
 }
 
 .recent-photos__card {
-  border-radius: 3px;
+  border-radius: 5px;
   height: auto;
   width: 100%;
   margin: 0 8px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
-  transition: transform .2s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(1, 22, 39, 0.2);
+  transition: transform .2s ease-out, box-shadow .2s ease-out;
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 5px 15px 0 rgba(1, 22, 39, 0.2);
     transform: translateY(-5px);
 
     .recent-photos__card-title {
@@ -60,6 +61,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
+  border-radius: 5px;
 
   h3 {
     color: white;
