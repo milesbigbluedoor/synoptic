@@ -73,6 +73,11 @@ const Contact = ({ data }) => {
           openModal()
         }
       })
+      .catch(() => {
+        setSubmissionSuccessful(false)
+        openModal()
+        setSending(false)
+      })
   }
 
   const handleInput = e => {
