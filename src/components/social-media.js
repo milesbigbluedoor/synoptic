@@ -25,7 +25,13 @@ const accounts = [
 const SocialMedia = () => (
   <div className="social-media">
     {accounts.map(account => (
-      <a href={account.url} className="social-media__link" key={account.name}>
+      <a
+        href={account.url}
+        className="social-media__link"
+        key={account.name}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div
           className="social-media__icon"
           style={{
