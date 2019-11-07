@@ -33,6 +33,16 @@
   .photo-filter__control {
     border-radius: 5px;
     padding: 8px;
+
+    &--is-focused {
+      border-color: $primary;
+      box-shadow: none;
+    }
+
+    &:hover {
+      border-color: $primary;
+      cursor: pointer;
+    }
   
     &--menu-is-open {
       border-color: $primary;
@@ -64,14 +74,14 @@
   
     &--is-selected {
       background-color: $primary;
-      color: $black;
+      color: white;
     }
 
     &--is-focused {
       cursor: pointer;
       background-color: rgba(65, 234, 212, .4);
     }
-  
+    
     &:last-child {
       margin-bottom: 0;
     }

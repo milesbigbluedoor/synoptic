@@ -14,6 +14,15 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+
+      allTaxonomyTermSubjects(sort: { fields: name, order: ASC }) {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
     }
   `).then(result => {
     result.data.allNodeBlog.edges.forEach(({ node }) => {
@@ -25,23 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-  })
-}
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  return graphql(`
-    {
-      allTaxonomyTermSubjects {
-        edges {
-          node {
-            id
-            name
-          }
-        }
-      }
-    }
-  `).then(result => {
     result.data.allTaxonomyTermSubjects.edges.forEach(({ node }) => {
       createPage({
         path: `/photos/subject/${node.name.toLowerCase()}`,
