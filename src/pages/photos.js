@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 import { navigate } from "@reach/router"
 import Select from "react-select"
 import "../scss/main.scss"
@@ -47,11 +47,11 @@ const Photos = ({ data, location }) => {
     const options = [
       {
         label: "All Photos",
-        value: "/photos",
+        value: withPrefix("/photos"),
       },
       ...data.allTaxonomyTermSubjects.edges.map(edge => ({
         label: edge.node.name,
-        value: `/photos/subject/${edge.node.name.toLowerCase()}`,
+        value: withPrefix(`/photos/subject/${edge.node.name.toLowerCase()}`),
       })),
     ]
 
