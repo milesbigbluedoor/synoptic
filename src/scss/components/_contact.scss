@@ -1,0 +1,150 @@
+.contact {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 105px 0;
+}
+
+.contact__title {
+  color: $black;
+  text-align: center;
+  font-size: 72px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.contact-form__fieldset {
+  margin-bottom: 32px;
+
+  label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .contact-form__input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+    }
+
+    &.textarea {
+      padding: 24px;
+    }
+  }
+}
+
+.contact-form__submit-button {
+  display: block;
+  margin: 0 auto;
+
+  background-color: rgba(65, 234, 212, .4);
+  color: $black;
+
+  &:hover {
+    color: white;
+    background-color: $primary;
+  }
+
+  &--disabled {
+    color: #555;
+    background-color: #c4c4c4;
+
+    &:hover {
+      color: #555;
+      background-color: #c4c4c4;
+    }
+  }
+}
+
+.contact-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .45);
+  display: flex;
+  justify-content: center;
+}
+
+.contact-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(1, 22, 39, 0.2);
+  background: white;
+  overflow: hidden;
+  margin-top: 150px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.contact-modal__header {
+  background: $primary;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.contact-modal__icon {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact-modal__text-wrapper {
+  padding: 32px;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-modal__title {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.contact-modal__text {
+  margin-bottom: 32px;
+  color: #555;
+}
+
+.contact-modal__close-btn {
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+.modal-anim-enter {
+  opacity: 0;
+}
+.modal-anim-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.modal-anim-exit {
+  opacity: 1;
+}
+.modal-anim-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
