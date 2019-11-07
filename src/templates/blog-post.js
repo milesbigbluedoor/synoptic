@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
       <article className="blog-post">
         <h1 className="blog-post__title">{post.title}</h1>
         <p className="blog-post__date">{post.created}</p>
-        <p
+        <div
           className="blog-post__body"
           dangerouslySetInnerHTML={{
             __html: post.body.value,

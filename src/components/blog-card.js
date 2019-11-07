@@ -15,7 +15,7 @@ const BlogCard = ({ image, date, title, body, url }) => (
     <div className="blog-card__text-wrapper">
       <p className="blog-card__date">{date}</p>
       <h3 className="blog-card__title">{title}</h3>
-      <p
+      <div
         className="blog-card__summary"
         dangerouslySetInnerHTML={{
           __html: `${body
