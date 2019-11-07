@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 const Blog = ({ data }) => {
   const [page, setPage] = useState(1)
   const [allPostsLoaded, setAllPostsLoaded] = useState(false)
-  const postsPerPage = 4
+  const postsPerPage = 5
 
   // renders the posts to the page based on the the current paginations "page"
   // and the amount of posts to be be displayed per "page"
