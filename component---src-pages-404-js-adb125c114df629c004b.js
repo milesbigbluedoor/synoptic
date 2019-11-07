@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{w2l6:function(e,n,t){"use strict";t.r(n);var o=t("q1tI"),a=t.n(o),l=t("Bl7J"),r=t("vrFN");n.default=function(){return a.a.createElement(l.a,null,a.a.createElement(r.a,{title:"404: Not found | John Doe Photography"}),a.a.createElement("h1",null,"NOT FOUND"),a.a.createElement("p",null,"The page you are looking for could not be found."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-adb125c114df629c004b.js.map
