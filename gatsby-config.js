@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/synoptic",
   siteMetadata: {
     title: "Photography Portfolio",
     description: "Welcome to the photography portfolio of John Doe.",

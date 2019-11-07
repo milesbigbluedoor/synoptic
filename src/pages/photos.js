@@ -61,7 +61,7 @@ const Photos = ({ data, location }) => {
         className="photo-filter"
         classNamePrefix="photo-filter"
         onChange={handleFilter}
-        value={location.state.selectedOption}
+        value={location.state ? location.state.selectedOption : ""}
         placeholder="Filter by subject"
       />
     )
@@ -130,7 +130,7 @@ export const query = graphql`
       }
     }
 
-    allTaxonomyTermSubjects {
+    allTaxonomyTermSubjects(sort: { fields: name, order: ASC }) {
       edges {
         node {
           name
