@@ -95,12 +95,19 @@
 }
 
 .contact-modal__header {
-  background: $primary;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+
+  &--success {
+    background: $primary;
+  }
+
+  &--failed {
+    background: #F71735;
+  }
 }
 
 .contact-modal__icon {
