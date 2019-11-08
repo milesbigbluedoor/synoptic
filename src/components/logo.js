@@ -15,7 +15,7 @@ const Logo = ({ modifier }) => {
   }
 
   return (
-    <Link to="/" className="branding">
+    <Link to="/" className="branding" aria-label="John Doe Photography Logo">
       <div
         className="branding__logo"
         style={{
