@@ -31,6 +31,7 @@ const SocialMedia = () => (
         key={account.name}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`${account.name} social media link`}
       >
         <div
           className="social-media__icon"
