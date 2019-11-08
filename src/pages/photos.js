@@ -63,6 +63,7 @@ const Photos = ({ data, location }) => {
         onChange={handleFilter}
         value={location.state ? location.state.selectedOption : ""}
         placeholder="Filter by subject"
+        aria-label="Photo Catalogue Filter Options"
       />
     )
   }
